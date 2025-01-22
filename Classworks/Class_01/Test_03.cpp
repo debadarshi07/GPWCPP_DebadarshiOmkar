@@ -1,35 +1,40 @@
 #include <iostream>
 using namespace std;
 
-/*
-    Uses of namespace
-
-    1. Helps to avoid naming conflicts
-    2. Make the code readable, reusable
-    3. Organises the code
-*/
-
-namespace CSE {
-    namespace section_2241028 {
-        void printDetails(string name, long redg) {
-            cout << "Name: " << name << ", Redg No: " << redg << ", Section 2241028 " << endl;
-        }
+namespace MathCalculation {
+    void add(int a, int b) {
+        cout << "Addition of " << a << " and " << b << " is: " << a + b << endl;
     }
 
-    namespace section_2241029 {
-        void printDetails(string name, long redg) {
-            cout << "Name: " << name << ", Redg No: " << redg << ", Section 2241029 " << endl;
+    void subtract(int a, int b) {
+        cout << "Difference between " << a << " and " << b << " is: " << a - b << endl;
+    }
+
+    void multiply(int a, int b)  {
+        cout << "Product of " << a << " and " << b << " is: " << a * b << endl;
+    }
+
+    void divide(int a, int b) {
+        if (b != 0) {
+            cout << "Quotient of " << a << " and " << b << " is: " << a / b << endl;
+        } else {
+            cout << "Error: Division by zero is not allowed." << endl;
         }
     }
 }
 
 int main() {
+    int num1, num2;
 
-    namespace sec_28 = CSE :: section_2241028;
-    namespace sec_29 = CSE :: section_2241029;
+    cout << "Enter first number: ";
+    cin >> num1;
+    cout << "Enter second number: ";
+    cin >> num2;
 
-    sec_28 :: printDetails("Debadarshi Omkar", 2241015006);
-    sec_29 :: printDetails("Sai Lochan Dash", 2241004177);
-    
+    MathCalculation :: add(num1, num2);
+    MathCalculation :: subtract(num1, num2);
+    MathCalculation :: multiply(num1, num2);
+    MathCalculation :: divide(num1, num2);
+
     return 0;
 }
