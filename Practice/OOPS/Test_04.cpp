@@ -34,4 +34,7 @@ public:
 int main() {
     Student student1("Debadarshi Omkar", 21, "Graduation", 41028);
     student1.getStudentInformation();
+
+    Student student2("Pat Cummins", 35, "Cricketer", 87659);
+    student2.getStudentInformation();
 }
