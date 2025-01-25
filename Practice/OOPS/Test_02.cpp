@@ -21,12 +21,12 @@ class Professor {
         }
 
         // Copy Constructor
-        // Professor(Professor& other) {
-        //     this -> name = other.name;
-        //     this -> department = other.department;
-        //     this -> subject = other.subject;
-        //     this -> salary = other.salary;
-        // }
+        Professor(Professor& other) {
+            this -> name = other.name;
+            this -> department = other.department;
+            this -> subject = other.subject;
+            this -> salary = other.salary;
+        }
 
         string name;
         string department;
@@ -56,8 +56,16 @@ class Professor {
 
 int main() {
     Professor prof1("Debadarshi Omkar", "Computer Science", "Programming", 85000);
+    prof1.setId(41015006);
     prof1.professorDetails();
 
     Professor prof2(prof1);
+    prof2.professorDetails();
+
+    prof1.changeDepartment("Artificial Intelligence");
+    prof2.name = "Pat Cummins";
+    prof2.setId(69696969);
+
+    prof1.professorDetails();
     prof2.professorDetails();
 }
