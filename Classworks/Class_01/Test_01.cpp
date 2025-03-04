@@ -9,21 +9,20 @@ void printNickName(string name) {
     cout << name << endl;
 }
 
-
 int main() {
-    cout <<"Debadarshi Omkar"<<endl;     // prints strings
+    cout << "Debadarshi Omkar" << endl;     // prints strings
 
     int num1;
     int num2;
     int sum = 0;
-    
-    cout<<"Enter the first number: ";
-    cin>>num1;      // Takes input
-    cout<<"Enter the second number: ";
-    cin>>num2;
+
+    cout << "Enter the first number: ";
+    cin >> num1;      // Takes input
+    cout << "Enter the second number: ";
+    cin >> num2;
 
     sum = num1 + num2;
-    cout<<"The sum of " << num1 << " and " << num2 <<" is: "<< sum<< endl;
+    cout << "The sum of " << num1 << " and " << num2 <<" is: "<< sum << endl;
 
 
     cout << "Size of int: " << sizeof(int) << endl;

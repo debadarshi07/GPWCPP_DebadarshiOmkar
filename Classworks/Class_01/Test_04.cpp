@@ -11,13 +11,13 @@ using namespace std;
 
 namespace CSE {
     namespace section_2241028 {
-        void printDetails(string name, long redg) {
+        void printDetails(string name, long long redg) {
             cout << "Name: " << name << ", Redg No: " << redg << ", Section 2241028 " << endl;
         }
     }
 
     namespace section_2241029 {
-        void printDetails(string name, long redg) {
+        void printDetails(string name, long long redg) {
             cout << "Name: " << name << ", Redg No: " << redg << ", Section 2241029 " << endl;
         }
     }

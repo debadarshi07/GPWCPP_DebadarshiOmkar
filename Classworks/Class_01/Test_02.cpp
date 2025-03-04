@@ -3,13 +3,13 @@ using namespace std;
 
 namespace lib1 {
     void sayMyName(string name) {
-        cout << "My name is : " << name << endl;
+        cout << "My name using lib1 is : " << name << endl;
     }
 }
 
 namespace lib2 {
     void sayMyName(string name) {
-        cout << "My name is : " << name << endl;
+        cout << "My name using lib2 is : " << name << endl;
     }
 }
 
