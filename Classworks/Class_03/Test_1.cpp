@@ -16,7 +16,6 @@ class Box {
 		return length * breadth * height;
 	}
 
-
 	double getLength() {
 		return length;
 	}
@@ -24,14 +23,12 @@ class Box {
 		this -> length = length;
 	}
 
-
 	double getBreadth() {
 		return breadth;
 	}
 	void setBreadth(double breadth) {
 		this -> breadth = breadth;
 	}
-
 
 	double getHeight() {
 		return height;
