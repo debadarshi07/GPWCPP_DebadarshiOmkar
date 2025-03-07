@@ -14,4 +14,5 @@ int main() {
 /*
     O/P
     2
+    x has been updated as there is an argument in the myfun function which takes the reference of variable x.
 */

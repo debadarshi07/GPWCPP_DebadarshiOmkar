@@ -15,4 +15,5 @@ int main() {
 /*
     O/P
     1 0
+    Swap function has been performed for variables i and j.
 */

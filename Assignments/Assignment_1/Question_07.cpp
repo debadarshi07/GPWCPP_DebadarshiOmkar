@@ -20,4 +20,5 @@ int main() {
 /*
     O/P
     A Main ~A
+    Constructor is invoked while object is created and Destructor is called once the object goes out of scope.
 */

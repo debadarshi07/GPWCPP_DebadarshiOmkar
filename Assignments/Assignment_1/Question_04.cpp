@@ -9,4 +9,5 @@ int main() {
 /*
     O/P
     0
+    Default value at all indices of an array is 0
 */
