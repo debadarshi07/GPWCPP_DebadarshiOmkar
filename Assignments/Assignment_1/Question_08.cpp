@@ -19,4 +19,6 @@ int main() {
     O/P
     My destructor
     My destructor
+
+    First the object itself has called the destructor and then the object got out of scope after execution hence destructor has been invoked once again by default.
 */

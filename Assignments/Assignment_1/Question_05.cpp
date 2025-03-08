@@ -15,5 +15,6 @@ int main() {
 /*
     O/P
     64
+
     variable g is passed by reference to function Cube.
 */

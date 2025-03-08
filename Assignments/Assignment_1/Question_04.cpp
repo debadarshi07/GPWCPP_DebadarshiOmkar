@@ -9,5 +9,6 @@ int main() {
 /*
     O/P
     0
-    Default value at all indices of an array is 0
+
+    Default value at every indices of an uninitialized global array is 0.
 */

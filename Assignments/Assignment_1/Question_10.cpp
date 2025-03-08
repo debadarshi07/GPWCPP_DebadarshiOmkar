@@ -16,4 +16,6 @@ int main() {
 /*
     O/P
     Constructor called
+
+    new keyword dynamically allocates memory for a Test Object and the constructor is called.
 */

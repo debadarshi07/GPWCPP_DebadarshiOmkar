@@ -20,5 +20,7 @@ int main() {
 /*
     O/P
     A Main ~A
-    Constructor is invoked while object is created and Destructor is called once the object goes out of scope.
+
+    Constructor is invoked while object is created and Destructor is called once the object goes out of scope. 
+    Here a static object has been created which has a lifetime until program completes execution.
 */

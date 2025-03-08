@@ -1,11 +1,13 @@
 #include <iostream>
 using namespace std;
+
 void swap(int &a, int &b) {
     int temp;
     temp = a;
     a = b;
     b = temp;
 }
+
 int main() {
     int i = 0, j = 1;
     swap(i, j);
@@ -15,5 +17,6 @@ int main() {
 /*
     O/P
     1 0
-    Swap function has been performed for variables i and j.
+
+    Value of i and j have been swapped as these are passed by reference to the swap function.
 */

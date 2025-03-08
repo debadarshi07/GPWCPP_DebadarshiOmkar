@@ -17,4 +17,6 @@ int main() {
 /*
     O/P
     
+
+    No object has been created, only the memory for the object has been assigned. Hence the constructor won't be invoked.
 */
