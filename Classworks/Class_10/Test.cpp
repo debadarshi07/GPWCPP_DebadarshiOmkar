@@ -9,8 +9,7 @@ Sprite branches[NUM_BRANCHES];
 
 // location of the player/branches. The player/branches can be left or right
 
-enum class side
-{
+enum class side {
      LEFT,
      RIGHT,
      NONE
@@ -20,8 +19,7 @@ side branchPositions[NUM_BRANCHES];
 // function to update the positions of the branches
 void updateBranches(int seed);
 
-int main()
-{
+int main() {
      VideoMode vm(1920, 1080);
      RenderWindow window(vm, "timber", Style::Fullscreen);
 
@@ -123,8 +121,7 @@ int main()
      textureBranch.loadFromFile("../graphics/branch.png");
 
      // set texture for each branch in the sprite
-     for (int i = 0; i < NUM_BRANCHES; i++)
-     {
+     for (int i = 0; i < NUM_BRANCHES; i++) {
           branches[i].setTexture(textureBranch);
           branches[i].setPosition(-2000, -2000);
 
@@ -180,14 +177,11 @@ int main()
      // control the player input
      bool acceptInput = false;
 
-     while (window.isOpen())
-     {
+     while (window.isOpen()) {
           Event event;
-          while (window.pollEvent(event))
-          {
+          while (window.pollEvent(event)) {
 
-               if (event.type == Event::KeyReleased && !paused)
-               {
+               if (event.type == Event::KeyReleased && !paused) {
 
                     acceptInput = true;
 
@@ -196,20 +190,17 @@ int main()
                }
           }
 
-          if (Keyboard::isKeyPressed(Keyboard::Escape))
-          {
+          if (Keyboard::isKeyPressed(Keyboard::Escape)) {
 
                window.close();
           }
-          if (Keyboard::isKeyPressed(Keyboard::Return))
-          {
+          if (Keyboard::isKeyPressed(Keyboard::Return)) {
                paused = false;
                score = 0;
                timeRemaining = 6;
 
                // make branches disappear initially
-               for (int i = 1; i < NUM_BRANCHES; i++)
-               {
+               for (int i = 1; i < NUM_BRANCHES; i++) {
                     branchPositions[i] = side::NONE;
                }
 
@@ -221,11 +212,9 @@ int main()
 
                acceptInput = true;
           }
-          if (acceptInput)
-          {
+          if (acceptInput) {
 
-               if (Keyboard::isKeyPressed(Keyboard::Right))
-               {
+               if (Keyboard::isKeyPressed(Keyboard::Right)) {
 
                     playerSide = side::RIGHT;
                     score++;
@@ -244,8 +233,7 @@ int main()
                     acceptInput = false;
                }
 
-               if (Keyboard::isKeyPressed(Keyboard::Left))
-               {
+               if (Keyboard::isKeyPressed(Keyboard::Left)) {
 
                     playerSide = side::LEFT;
                     score++;
@@ -264,8 +252,7 @@ int main()
                     acceptInput = false;
                }
           }
-          if (!paused)
-          {
+          if (!paused) {
                // Updating the scene
                Time dt = clock.restart();
 
@@ -275,8 +262,7 @@ int main()
                // size up the timebar
                timeBar.setSize(Vector2f(timeBarWidthPerSecond * timeRemaining, timeBarHeight));
 
-               if (timeRemaining <= 0.0f)
-               {
+               if (timeRemaining <= 0.0f) {
                     paused = true;
 
                     // change the message shown to the player
@@ -289,8 +275,7 @@ int main()
                     messageText.setPosition(1920 / 2.0f, 1080 / 2.0f);
                }
 
-               if (!beeActive)
-               {
+               if (!beeActive) {
                     srand((int)time(0));
                     beeSpeed = (rand() % 200) + 200;
 
@@ -300,12 +285,10 @@ int main()
                     spriteBee.setPosition(2000, height);
                     beeActive = true;
                }
-               else
-               {
+               else {
                     spriteBee.setPosition(spriteBee.getPosition().x - (beeSpeed * dt.asSeconds()), spriteBee.getPosition().y);
 
-                    if (spriteBee.getPosition().x < -100)
-                    {
+                    if (spriteBee.getPosition().x < -100) {
                          beeActive = false;
                     }
                }
@@ -313,8 +296,7 @@ int main()
                // managing the cloud to blow
 
                // cloud1
-               if (!cloud1Active)
-               {
+               if (!cloud1Active) {
                     srand((int)time(0) * 10);
                     cloud1Speed = (rand() % 200);
 
@@ -324,18 +306,15 @@ int main()
                     spriteCloud1.setPosition(-200, height);
                     cloud1Active = true;
                }
-               else
-               {
+               else {
                     spriteCloud1.setPosition(spriteCloud1.getPosition().x + (cloud1Speed * dt.asSeconds()), spriteCloud1.getPosition().y);
-                    if (spriteCloud1.getPosition().x > 1920)
-                    {
+                    if (spriteCloud1.getPosition().x > 1920) {
                          cloud1Active = false;
                     }
                }
 
                // cloud2
-               if (!cloud2Active)
-               {
+               if (!cloud2Active) {
                     srand((int)time(0) * 20);
                     cloud2Speed = (rand() % 200);
 
@@ -345,18 +324,15 @@ int main()
                     spriteCloud2.setPosition(-200, height);
                     cloud2Active = true;
                }
-               else
-               {
+               else {
                     spriteCloud2.setPosition(spriteCloud2.getPosition().x + (cloud2Speed * dt.asSeconds()), spriteCloud2.getPosition().y);
-                    if (spriteCloud2.getPosition().x > 1920)
-                    {
+                    if (spriteCloud2.getPosition().x > 1920) {
                          cloud2Active = false;
                     }
                }
 
                // cloud 3
-               if (!cloud3Active)
-               {
+               if (!cloud3Active) {
                     srand((int)time(0) * 30);
                     cloud3Speed = (rand() % 200);
 
@@ -366,11 +342,9 @@ int main()
                     spriteCloud3.setPosition(-200, height);
                     cloud3Active = true;
                }
-               else
-               {
+               else {
                     spriteCloud3.setPosition(spriteCloud3.getPosition().x + (cloud3Speed * dt.asSeconds()), spriteCloud3.getPosition().y);
-                    if (spriteCloud3.getPosition().x > 1920)
-                    {
+                    if (spriteCloud3.getPosition().x > 1920) {
                          cloud3Active = false;
                     }
                }
@@ -380,44 +354,37 @@ int main()
                scoreText.setString(ss.str());
 
                // update the branch sprite
-               for (int i = 0; i < NUM_BRANCHES; i++)
-               {
+               for (int i = 0; i < NUM_BRANCHES; i++) {
                     float height = i * 150;
 
-                    if (branchPositions[i] == side::LEFT)
-                    {
+                    if (branchPositions[i] == side::LEFT) {
                          // move the sprite to left side
                          branches[i].setPosition(610, height);
                          // flip the sprite to other side by 180 degree
                          branches[i].setRotation(180);
                     }
-                    else if (branchPositions[i] == side::RIGHT)
-                    {
+                    else if (branchPositions[i] == side::RIGHT) {
                          // MOVE THE SPRITE TO THE RIGHT SIDE
                          branches[i].setPosition(1330, height);
                          branches[i].setRotation(0);
                     }
 
-                    else
-                    {
+                    else {
                          // hide the branches
                          branches[i].setPosition(3000, height);
                     }
                }
 
-               if (logActive)
-               {
+               if (logActive) {
                     spriteLog.setPosition(spriteLog.getPosition().x + (logSpeedX * dt.asSeconds()), spriteLog.getPosition().y + (logSpeedY * dt.asSeconds()));
 
-                    if (spriteLog.getPosition().x < -100 || spriteLog.getPosition().x > 2000)
-                    {
+                    if (spriteLog.getPosition().x < -100 || spriteLog.getPosition().x > 2000) {
                          logActive = false;
                          spriteLog.setPosition(810, 720);
                     }
                }
 
-               if (branchPositions[5] == playerSide)
-               {
+               if (branchPositions[5] == playerSide) {
                     // death
                     paused = true;
                     acceptInput = false;
@@ -449,14 +416,12 @@ int main()
           window.draw(spriteCloud3);
 
           // drawing the branches
-          for (int i = 0; i < NUM_BRANCHES; i++)
-          {
+          for (int i = 0; i < NUM_BRANCHES; i++) {
                window.draw(branches[i]);
           }
           window.draw(scoreText);
           window.draw(timeBar);
-          if (paused)
-          {
+          if (paused) {
                window.draw(messageText);
           }
           window.draw(spritePlayer);
@@ -468,11 +433,9 @@ int main()
 }
 
 // function to update branches
-void updateBranches(int seed)
-{
+void updateBranches(int seed) {
      // move all branches to one place
-     for (int j = NUM_BRANCHES - 1; j > 0; j--)
-     {
+     for (int j = NUM_BRANCHES - 1; j > 0; j--) {
 
           branchPositions[j] = branchPositions[j - 1];
      }
@@ -481,8 +444,7 @@ void updateBranches(int seed)
      srand((int)time(0) + seed);
      int r = (rand() % 5);
 
-     switch (r)
-     {
+     switch (r) {
      case 0:
           branchPositions[0] = side::LEFT;
           break;
