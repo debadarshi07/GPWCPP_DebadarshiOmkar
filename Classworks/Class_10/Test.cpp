@@ -256,7 +256,7 @@ int main() {
                Time dt = clock.restart();
 
                // subtract from the amount of time remaining
-               timeRemaining = timeRemaining - dt.asSeconds();
+               timeRemaining -= dt.asSeconds();
 
                // size up the timebar
                timeBar.setSize(Vector2f(timeBarWidthPerSecond * timeRemaining, timeBarHeight));
