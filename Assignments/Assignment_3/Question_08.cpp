@@ -3,7 +3,8 @@
 using namespace sf;
 
 int main() {
-    RenderWindow window(VideoMode(800, 600), "Timber Game");
+    VideoMode(800, 600);
+    RenderWindow window(vm, "Timber Game", Style :: FullScreen);
 
     Font font;
     font.loadFromFile("arial.ttf");

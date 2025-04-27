@@ -3,11 +3,11 @@
 using namespace sf;
 
 int main() {
-    RenderWindow window(VideoMode(800, 600), "Event Example");
-
-    Event event;
+    VideoMode vm(800, 600);
+    RenderWindow window(vm, "Event Example", Style :: FullScreen);
 
     while (window.isOpen()) {
+        Event event;
         while (window.pollEvent(event)) {
             if (event.type == Event::KeyPressed) {
                 std::cout << "KeyPressed Detected" << std::endl;

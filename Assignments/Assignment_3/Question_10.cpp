@@ -2,7 +2,8 @@
 using namespace sf;
 
 int main() {
-    RenderWindow window(VideoMode(800, 600), "SFML Sprites");
+    VideoMode(800, 600);
+    RenderWindow window(vm, "SFML Sprites", Style :: FullScreen);
 
     Texture textureX, textureY, textureZ, textureZombie;
     textureX.loadFromFile("X.png");

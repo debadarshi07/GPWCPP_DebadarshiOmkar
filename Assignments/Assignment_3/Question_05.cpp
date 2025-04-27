@@ -5,7 +5,8 @@
 using namespace sf;
 
 int main() {
-    RenderWindow window(VideoMode(800, 600), "Timber Game - Out of Time Sound");
+    VideoMode(800, 600);
+    RenderWindow window(vm, "Timber Game - Out of Time Sound", Style :: FullScreen);
 
     SoundBuffer buffer;
     buffer.loadFromFile("out_of_time_sound.wav");

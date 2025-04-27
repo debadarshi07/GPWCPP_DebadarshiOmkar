@@ -2,7 +2,8 @@
 using namespace sf;
 
 int main() {
-    RenderWindow window(VideoMode(800, 600), "Timber Game");
+    VideoMode(800, 600);
+    RenderWindow window(vm, "Timber Game", Style :: FullScreen);
 
     bool logActive = false;
     Texture textureLog;
