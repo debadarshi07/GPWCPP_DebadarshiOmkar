@@ -89,12 +89,12 @@ int main() {
      // draw text
      int score = 0;
 
-     Text messageText;
-     Text scoreText;
-
      // to choose the font
      Font font;
      font.loadFromFile("../fonts/KOMIKAP_.ttf");
+
+     Text messageText;
+     Text scoreText;
 
      // setting font for our message
      messageText.setFont(font);
@@ -159,7 +159,7 @@ int main() {
      spriteAxe.setTexture(textureAxe);
      spriteAxe.setPosition(700, 830);
 
-     // // align the axe with the treee
+     // align the axe with the treee
      const float AXE_POSITION_LEFT = 700;
      const float AXE_POSITION_RIGHT = 1075;
 
@@ -191,7 +191,6 @@ int main() {
           }
 
           if (Keyboard::isKeyPressed(Keyboard::Escape)) {
-
                window.close();
           }
           if (Keyboard::isKeyPressed(Keyboard::Return)) {
@@ -368,7 +367,6 @@ int main() {
                          branches[i].setPosition(1330, height);
                          branches[i].setRotation(0);
                     }
-
                     else {
                          // hide the branches
                          branches[i].setPosition(3000, height);
@@ -436,7 +434,6 @@ int main() {
 void updateBranches(int seed) {
      // move all branches to one place
      for (int j = NUM_BRANCHES - 1; j > 0; j--) {
-
           branchPositions[j] = branchPositions[j - 1];
      }
      // move new branches to position 0
@@ -448,14 +445,10 @@ void updateBranches(int seed) {
      case 0:
           branchPositions[0] = side::LEFT;
           break;
-
      case 1:
-
           branchPositions[0] = side::RIGHT;
           break;
-
      default:
-
           branchPositions[0] = side::NONE;
           break;
      }
