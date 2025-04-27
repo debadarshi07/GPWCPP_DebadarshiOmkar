@@ -35,7 +35,7 @@ void Ball :: reboundBottom() {
 }
 
 void Ball :: update(Time dt) {
-	m_Position.y = m_Position.y + m_DirectionY * m_Speed * dt.asSeconds();
-	m_Position.x = m_Position.x + m_DirectionX * m_Speed * dt.asSeconds();
+	m_Position.y += m_DirectionY * m_Speed * dt.asSeconds();
+	m_Position.x += m_DirectionX * m_Speed * dt.asSeconds();
 	m_Shape.setPosition(m_Position);
 }

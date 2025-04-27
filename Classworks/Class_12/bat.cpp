@@ -34,11 +34,11 @@ void Bat :: stopRight() {
 
 void Bat :: update(Time dt) {
 	if (m_MovingLeft) {
-		m_Position.x = m_Position.x - m_Speed * dt.asSeconds();
+		m_Position.x -= m_Speed * dt.asSeconds();
 	}
 	
 	if (m_MovingRight) {
-		m_Position.x = m_Position.x + m_Speed * dt.asSeconds();
+		m_Position.x += m_Speed * dt.asSeconds();
 	}
 	
 	m_Shape.setPosition(m_Position);

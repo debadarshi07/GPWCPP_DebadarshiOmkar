@@ -5,7 +5,7 @@
 #include <SFML/Graphics.hpp>
 
 int main() {
-	VideoMode vm(3840, 2160);
+	VideoMode vm(1920, 1080);
 	
 	// Create and Open window
 	RenderWindow window(vm, "Pong", Style::Fullscreen);
@@ -16,9 +16,10 @@ int main() {
 	Bat bat(1920/2, 1080 - 20);
 	Ball ball(1920/2, 0);
 
-	Text hud;
 	Font font;
 	font.loadFromFile("../fonts/newfont.ttf");
+
+	Text hud;
 	hud.setFont(font);
 	
 	// Make it nice and big
