@@ -2,7 +2,8 @@
 using namespace sf;
 
 int main() {
-    RenderWindow window(VideoMode(960, 540), "Display SOA");
+    VideoMode vm(960, 540);
+    RenderWindow window(vm, "Display SOA", Style :: FullScreen);
 
     Texture texture;
     texture.loadFromFile("soa.jpeg");

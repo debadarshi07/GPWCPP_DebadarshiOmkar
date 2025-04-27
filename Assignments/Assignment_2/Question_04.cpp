@@ -2,7 +2,8 @@
 using namespace sf;
 
 int main() {
-    RenderWindow window(VideoMode(960, 540), "Test Window");
+    VideoMode vm(960, 540);
+    RenderWindow window(vm, "Test Window", Style :: FullScreen);
 
     return 0;
 }

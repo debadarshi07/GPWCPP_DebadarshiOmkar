@@ -2,7 +2,8 @@
 using namespace sf;
 
 int main() {
-    RenderWindow window(VideoMode(960, 540), "Timber");
+    VideoMode vm(960, 540);
+    RenderWindow window(vm, "Timber", Style :: FullScreen);
 
     while (window.isOpen()) {
         if (Keyboard :: isKeyPressed(Keyboard :: Escape)) {
