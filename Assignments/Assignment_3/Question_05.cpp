@@ -23,6 +23,7 @@ int main() {
                 window.close();
             }
 
+            // Any condition to detect out of time
             if (event.type == Event::KeyPressed && event.key.code == Keyboard::O) {
                 outOfTime = true;
             }

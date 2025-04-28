@@ -2,9 +2,18 @@
 #include <SFML/Window.hpp>
 using namespace sf;
 
+int NUM_BRANCHES = 5;
+Sprite branches[NUM_BRANCHES];
+
 int main() {
-    VideoMode(800, 600);
+    VideoMode vm(1920, 1080);
     RenderWindow window(vm, "Timber Game", Style :: FullScreen);
+
+    Texture playerTexture;
+    playerTexture.loadFromFile("./player.png");
+    Sprite spritePlayer;
+    spritePlayer.setTexture(playerTexture);
+    spritePlayer.setPosition(800, 800);
 
     Font font;
     font.loadFromFile("arial.ttf");
@@ -24,7 +33,8 @@ int main() {
     while (window.isOpen()) {
         window.clear();
 
-        if (Keyboard::isKeyPressed(Keyboard::Space)) {
+        // Proper logic to be mentioned to track whether player has been squashed by a branch
+        if (spritePlayer.getGlobalBounds().intersects(branches[NUM_BRANCHES - 1].getGlobalBounds())) {
             playerSquashed = true;
         }
 

@@ -13,7 +13,7 @@ int main() {
     logSprite.setPosition(400.f, 300.f);
 
     while (window.isOpen()) {
-        if (Keyboard::isKeyPressed(Keyboard::Space)) {
+        if ((Keyboard::isKeyPressed(Keyboard::Left)) || (Keyboard::isKeyPressed(Keyboard::Right))) {
             logActive = true;
         }
         window.clear();
