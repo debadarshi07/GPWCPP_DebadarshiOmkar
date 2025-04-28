@@ -20,6 +20,10 @@ float Ball :: getXVelocity() {
 	return m_DirectionX;
 }
 
+float Ball :: getYVelocity() {
+	return m_DirectionY;
+}
+
 void Ball :: reboundSides() {
 	m_DirectionX = -m_DirectionX;
 }
