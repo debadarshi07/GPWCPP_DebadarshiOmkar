@@ -18,7 +18,8 @@ public:
 };
 
 int main() {
-    RenderWindow window(VideoMode(1920, 1080), "SelfBat Demo");
+    VideoMode(1920, 1080);
+    RenderWindow window(vm, "SelfBat Demo", Style :: FullScreen);
     SelfBat bat(500.f, 500.f);
 
     while (window.isOpen()) {

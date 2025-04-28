@@ -32,7 +32,8 @@ public:
     }
 };
 int main() {
-    RenderWindow window(VideoMode(1920, 1080), "PONG Ball Top Collision");
+    VideoMode(1920, 1080);
+    RenderWindow window(vm, "PONG Ball Top Collision", Style :: FullScreen);
 
     PongGame game;
     Clock clock;

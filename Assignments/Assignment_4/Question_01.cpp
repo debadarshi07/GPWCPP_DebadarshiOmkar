@@ -3,10 +3,10 @@
 using namespace sf;
 
 class HypoBat {
-public:
-    HypoBat(){}
+    private:
+        Vector2f position;
+        RectangleShape shape;
+    public:
+        HypoBat(){}
 
-private:
-    Vector2f position;
-    RectangleShape shape;
 };

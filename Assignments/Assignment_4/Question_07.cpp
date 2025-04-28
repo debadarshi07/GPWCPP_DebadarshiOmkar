@@ -18,7 +18,8 @@ public:
 };
 
 int main() {
-    RenderWindow window(VideoMode(1920, 1080), "Rectangle Window");
+    VideoMode(1920, 1080);
+    RenderWindow window(vm, "Rectangle Window", Style :: FullScreen);
 
     MyRectangle myRect;
 

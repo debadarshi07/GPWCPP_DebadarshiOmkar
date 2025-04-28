@@ -4,7 +4,8 @@ using namespace sf;
 using namespace std;
 
 int main() {
-    RenderWindow window(VideoMode(800, 600), "Pong");
+    VideoMode(800, 600);
+    RenderWindow window(vm, "Pong", Style :: FullScreen);
 
     while (window.isOpen()) {
         Event event;
