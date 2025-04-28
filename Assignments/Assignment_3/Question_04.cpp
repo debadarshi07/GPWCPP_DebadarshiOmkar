@@ -3,7 +3,8 @@
 using namespace sf;
 
 int main() {
-    RenderWindow window(VideoMode(800, 600), "Keyboard Input Example");
+    VideoMode(800, 600);
+    RenderWindow window(vm, "Keyboard Input Example", Style :: FullScreen);
 
     while (window.isOpen()) {
         if (Keyboard::isKeyPressed(Keyboard::Enter)) {
