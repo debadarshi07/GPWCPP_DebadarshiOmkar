@@ -44,8 +44,8 @@ int main() {
      Sprite spriteBee;
      spriteBee.setTexture(textureBee);
      spriteBee.setPosition(0, 800);
-     bool beeActive = false;
 
+     bool beeActive = false;
      float beeSpeed = 0.0f;
 
      // making clouds
@@ -79,7 +79,7 @@ int main() {
      float timeBarHeight = 80;
      timeBar.setSize(Vector2f(timeBarStartWidth, timeBarHeight));
      timeBar.setFillColor(Color::Red);
-     timeBar.setPosition((1920 / 2) - timeBarStartWidth / 2, 980);
+     timeBar.setPosition((1920 - timeBarStartWidth) / 2, 980);
 
      Time gameTimeTotal;
      float timeRemaining = 6.0f;
@@ -111,6 +111,8 @@ int main() {
      // setting font color
      messageText.setFillColor(Color::White);
      scoreText.setFillColor(Color::White);
+
+     // setting positions of texts
      FloatRect textRect = messageText.getLocalBounds();
      messageText.setOrigin(textRect.left + textRect.width / 2.0f, textRect.top + textRect.height / 2.0f);
      messageText.setPosition(1920 / 2.0f, 1080 / 2.0f);
