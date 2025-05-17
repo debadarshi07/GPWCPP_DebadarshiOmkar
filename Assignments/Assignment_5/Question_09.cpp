@@ -24,13 +24,13 @@ void displayBackground(VertexArray& rVA, IntRect arena) {
             rVA[currentVertex + 3].position = Vector2f(x, y + TILE_SIZE);
 
             bool isBorder = (i == 0 || j == 0 || i == worldWidth - 1 || j == worldHeight - 1);
-            bool isDiagonalMud2 = (i == j && i > 0 && i < worldWidth - 1 && j > 0 && j < worldHeight - 1);
+            bool isMud2Cross = (i == worldWidth / 2 || j == worldHeight / 2);
 
             Vector2f texTL;
 
             if (isBorder)
                 texTL = Vector2f(0, 150); // wall
-            else if (isDiagonalMud2)
+            else if (isMud2Cross)
                 texTL = Vector2f(0, 100); // mud-2
             else
                 texTL = Vector2f(0, 50);  // grass
