@@ -23,11 +23,9 @@ int main() {
      VideoMode vm(1920, 1080);
      RenderWindow window(vm, "timber", Style::Fullscreen);
 
+     // make background sprite
      Texture textureBackground;
-
      textureBackground.loadFromFile("../graphics/background.png");
-
-     // Create a sprite
      Sprite spriteBackground;
      spriteBackground.setTexture(textureBackground);
      spriteBackground.setPosition(0, 0);
@@ -39,6 +37,7 @@ int main() {
      spriteTree.setTexture(textureTree);
      spriteTree.setPosition(810, 0);
 
+     // make bee sprite
      Texture textureBee;
      textureBee.loadFromFile("../graphics/bee.png");
      Sprite spriteBee;
@@ -182,9 +181,7 @@ int main() {
      while (window.isOpen()) {
           Event event;
           while (window.pollEvent(event)) {
-
                if (event.type == Event::KeyReleased && !paused) {
-
                     acceptInput = true;
 
                     // hide the axe
@@ -403,9 +400,9 @@ int main() {
                }
           }
 
-          //**************************************************
-          //                         Drawing board
-          //*************************************************
+           //*************************************************//
+          //                   Drawing board                 //
+         //*************************************************//
 
           window.clear();
           window.draw(spriteBackground);
