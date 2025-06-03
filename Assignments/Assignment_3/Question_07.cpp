@@ -2,8 +2,8 @@
 using namespace sf;
 
 int main() {
-    VideoMode(800, 600);
-    RenderWindow window(vm, "Timber Game", Style :: FullScreen);
+    VideoMode vm(800, 600);
+    RenderWindow window(vm, "Timber Game", Style::FullScreen);
 
     bool logActive = false;
     Texture textureLog;
@@ -16,10 +16,12 @@ int main() {
         if ((Keyboard::isKeyPressed(Keyboard::Left)) || (Keyboard::isKeyPressed(Keyboard::Right))) {
             logActive = true;
         }
+
         window.clear();
+
         if (logActive) {
-            logSprite.move(5.f, 0.f);
-            if (logSprite.getPosition().x > window.getSize().x) {
+            logSprite.move(1000.f, 800.f);
+            if (logSprite.getPosition().x > window.getSize().x || logSprite.getPosition().y > window.getSize().y) {
                 logActive = false;
             }
             window.draw(logSprite);
