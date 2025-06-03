@@ -88,7 +88,6 @@ int main() {
 			ball.reboundBatorTop();
 		}
 		
-		
 		// Display 
 		window.clear();
 		window.draw(hud);
