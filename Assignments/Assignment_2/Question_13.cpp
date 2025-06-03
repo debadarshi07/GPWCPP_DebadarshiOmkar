@@ -2,7 +2,7 @@
 using namespace sf;
 
 int main() {
-    VideoMode(1920, 1080);
+    VideoMode vm(1920, 1080);
     RenderWindow window(vm, "Circle Shapes", Style :: FullScreen);
 
     float radius = 50.0f;

@@ -8,7 +8,9 @@ int main() {
     Font font;
     font.loadFromFile("KONIKAP.ttf");
 
-    Text text("SOA UNIVERSITY", font, 100);
+    Text text;
+    text.setString("SOA UNIVERSITY");
+    text.setCharacterSize(100);
     text.setFont(font);
     text.setFillColor(Color::Red);
 
