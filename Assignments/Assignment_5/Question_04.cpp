@@ -10,43 +10,42 @@ int main() {
     int& maxVal = getMax(x, y);
     cout << maxVal << endl;
     maxVal = 30;
-    cout << "x = " << x << ", y = " << y << endl;
-    
-    x = 20;
-    y = 20;
-    maxVal = getMax(x, y);
-    cout << maxVal << endl;
-    maxVal = 30;
-    cout << "x = " << x << ", y = " << y << endl;
-    
-    x = 10;
-    y = 20;
-    maxVal = getMax(x, y);
-    cout << maxVal << endl;
-    maxVal = 30;
-    cout << "x = " << x << ", y = " << y << endl;
-    
-    x = 20;
-    y = 10;
-    maxVal = getMax(x, y);
-    cout << maxVal << endl;
-    maxVal = 30;
-    cout << "x = " << x << ", y = " << y << endl;
-    
-    x = 60;
-    y = 40;
-    maxVal = getMax(x, y);
-    cout << maxVal << endl;
-    maxVal = 30;
-    cout << "x = " << x << ", y = " << y << endl;
-    
-    x = 40;
-    y = 60;
-    maxVal = getMax(x, y);
-    cout << maxVal << endl;
-    maxVal = 30;
-    cout << "x = " << x << ", y = " << y << endl;
-    
-    
+    cout << "x = " << x << ", y = " << y << "\n\n";
+
+    // x = 20;
+    // y = 20;
+    // maxVal = getMax(x, y);
+    // cout << maxVal << endl;
+    // maxVal = 30;
+    // cout << "x = " << x << ", y = " << y << "\n\n";
+
+    // x = 10;
+    // y = 20;
+    // maxVal = getMax(x, y);
+    // cout << maxVal << endl;
+    // maxVal = 30;
+    // cout << "x = " << x << ", y = " << y << "\n\n";
+
+    // x = 20;
+    // y = 10;
+    // maxVal = getMax(x, y);
+    // cout << maxVal << endl;
+    // maxVal = 30;
+    // cout << "x = " << x << ", y = " << y << "\n\n";
+
+    // x = 60;
+    // y = 40;
+    // maxVal = getMax(x, y);
+    // cout << maxVal << endl;
+    // maxVal = 30;
+    // cout << "x = " << x << ", y = " << y << "\n\n";
+
+    // x = 40;
+    // y = 60;
+    // maxVal = getMax(x, y);
+    // cout << maxVal << endl;
+    // maxVal = 30;
+    // cout << "x = " << x << ", y = " << y << "\n\n";
+
     return 0;
 }
